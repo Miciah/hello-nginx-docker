@@ -2,11 +2,14 @@
     "metadata": {
         "name": "route-unsecure-path"
     },
-    "id": "route-unsecure-path",
-    "apiVersion": "v1beta1",
+    "apiVersion": "v1beta3",
     "kind": "Route",
-    "host": "www.example.com",
-    "path": "/test",
-    "serviceName": "hello-nginx"
+    "spec": {
+        "host": "www.example.com",
+        "path": "/test",
+        "to": {
+            "name": "hello-nginx-http"
+        }
+    }
 }
 
